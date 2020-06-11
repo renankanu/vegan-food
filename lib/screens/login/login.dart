@@ -9,11 +9,14 @@ class Login extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-          child: Center(
-        child: Text(
-          "Login",
-          style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
-        ),
+              child: Column(
+        children: <Widget>[
+            Text(
+              "Login",
+              style:
+                  TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+            ),
+        ],
       )),
     );
   }
