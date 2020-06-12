@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vegan_food/screens/login/widgets/custom_imput.dart';
 
 class Signup extends StatelessWidget {
 
@@ -19,6 +20,42 @@ class Signup extends StatelessWidget {
             size: 20,
             color: Colors.green,
           ),
+        ),
+      ),
+      body: Container(
+        height: MediaQuery.of(context).size.height,
+        width: double.infinity,
+        child: Column(
+          children: <Widget>[
+            Column(
+              children: <Widget>[
+                Column(
+                  children: <Widget>[
+                    Text(
+                      "Login",
+                      style:
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Text(
+                      "Login to your account",
+                      style: TextStyle(fontSize: 15, color: Colors.grey[700]),
+                    ),
+                  ],
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 40),
+                  child: Column(
+                    children: <Widget>[
+                      CustomInput(label: "Nome",)
+                    ],
+                  ),
+                )
+              ],
+            )
+          ],
         ),
       ),
     );
