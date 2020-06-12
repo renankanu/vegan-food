@@ -46,7 +46,9 @@ class Login extends StatelessWidget {
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: Column(
-                    children: <Widget>[makeInput(label: "Email"), makeInput(label: "Email")],
+                    children: <Widget>[
+                      makeInput(label: "Email"),
+                      makeInput(label: "Senha", obscureText: true)],
                   ),
                 )
               ],

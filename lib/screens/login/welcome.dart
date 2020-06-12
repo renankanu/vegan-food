@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:vegan_food/screens/login/login.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -22,7 +23,8 @@ class Welcome extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Bem vindo",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30, fontFamily: 'Montserrat'),
+
                   ),
                   SizedBox(
                     height: 20,
@@ -43,7 +45,9 @@ class Welcome extends StatelessWidget {
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                    },
                     shape: RoundedRectangleBorder(
                         side: BorderSide(color: Colors.black),
                         borderRadius: BorderRadius.circular(50)),
