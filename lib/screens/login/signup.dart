@@ -32,16 +32,12 @@ class Signup extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     Text(
-                      "Login",
+                      "Registrar",
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold, fontFamily: 'Montserrat'),
                     ),
                     SizedBox(
                       height: 20,
-                    ),
-                    Text(
-                      "Login to your account",
-                      style: TextStyle(fontSize: 15, color: Colors.grey[700]),
                     ),
                   ],
                 ),
@@ -49,7 +45,10 @@ class Signup extends StatelessWidget {
                   padding: EdgeInsets.symmetric(horizontal: 40),
                   child: Column(
                     children: <Widget>[
-                      CustomInput(label: "Nome",)
+                      CustomInput(label: "Nome",),
+                      CustomInput(label: "Email",),
+                      CustomInput(label: "Senha", obscureText: true,),
+                      CustomInput(label: "Repetir Senha", obscureText: true,),
                     ],
                   ),
                 )
