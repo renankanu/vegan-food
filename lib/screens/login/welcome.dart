@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:vegan_food/screens/login/login.dart';
+import 'package:vegan_food/screens/login/signup.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -69,7 +70,9 @@ class Welcome extends StatelessWidget {
                     child: MaterialButton(
                       minWidth: double.infinity,
                       height: 60,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
+                      },
                       elevation: 0,
                       color: Colors.green,
                       shape: RoundedRectangleBorder(
