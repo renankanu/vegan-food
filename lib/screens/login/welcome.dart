@@ -50,7 +50,7 @@ class Welcome extends StatelessWidget {
                   },),
                   SizedBox(height: 20,),
                   ButtonBase(title: 'Sign Up', backgroundColor: Colors.green, onPress: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
                   },),
                 ],
               )
