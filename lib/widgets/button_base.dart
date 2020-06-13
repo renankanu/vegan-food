@@ -5,11 +5,13 @@ class ButtonBase extends StatelessWidget {
       {this.title,
       this.borderColor = Colors.black,
       this.backgroundColor = Colors.white,
+      this.textColor = Colors.black,
       this.onPress});
 
   final String title;
   final Color borderColor;
   final Color backgroundColor;
+  final Color textColor;
   final VoidCallback onPress;
 
   @override
@@ -25,7 +27,7 @@ class ButtonBase extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: textColor),
       ),
     );
   }
