@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:vegan_food/screens/login/login.dart';
 import 'package:vegan_food/screens/login/signup.dart';
+import 'package:vegan_food/widgets/button_base.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -43,47 +44,14 @@ class Welcome extends StatelessWidget {
               ),
               Column(
                 children: <Widget>[
-                  MaterialButton(
-                    minWidth: double.infinity,
-                    height: 60,
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
-                    },
-                    shape: RoundedRectangleBorder(
-                        side: BorderSide(color: Colors.black),
-                        borderRadius: BorderRadius.circular(50)),
-                    child: Text(
-                      "Login",
-                      style:
-                          TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
-                    ),
-                  ),
                   SizedBox(height: 20,),
-                  Container(
-                    decoration: BoxDecoration(borderRadius: BorderRadius.circular(50),
-                    border: Border(
-                      bottom: BorderSide(color: Colors.black),
-                      top: BorderSide(color: Colors.black),
-                      left: BorderSide(color: Colors.black),
-                      right: BorderSide(color: Colors.black),
-                    )),
-                    child: MaterialButton(
-                      minWidth: double.infinity,
-                      height: 60,
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
-                      },
-                      elevation: 0,
-                      color: Colors.green,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(50)),
-                      child: Text(
-                        "Sign up",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w600, fontSize: 18),
-                      ),
-                    ),
-                  )
+                  ButtonBase(title: 'Login', onPress: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                  },),
+                  SizedBox(height: 20,),
+                  ButtonBase(title: 'Sign Up', backgroundColor: Colors.green, onPress: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+                  },),
                 ],
               )
             ],
