@@ -25,8 +25,10 @@ class Welcome extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     "Bem vindo",
-                    style: TextStyle(fontWeight: FontWeight.w700, fontSize: 30, fontFamily: 'Montserrat'),
-
+                    style: TextStyle(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 30,
+                        fontFamily: 'Montserrat'),
                   ),
                   SizedBox(
                     height: 20,
@@ -44,14 +46,28 @@ class Welcome extends StatelessWidget {
               ),
               Column(
                 children: <Widget>[
-                  SizedBox(height: 20,),
-                  ButtonBase(title: 'Login', onPress: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
-                  },),
-                  SizedBox(height: 20,),
-                  ButtonBase(title: 'Sign Up', backgroundColor: Colors.green, textColor: Colors.white, onPress: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Signup()));
-                  },),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ButtonBase(
+                    title: 'Login',
+                    onPress: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Login()));
+                    },
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ButtonBase(
+                    title: 'Sign Up',
+                    backgroundColor: Colors.green,
+                    textColor: Colors.white,
+                    onPress: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Signup()));
+                    },
+                  ),
                 ],
               )
             ],

@@ -27,7 +27,8 @@ class ButtonBase extends StatelessWidget {
       ),
       child: Text(
         title,
-        style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18, color: textColor),
+        style: TextStyle(
+            fontWeight: FontWeight.w600, fontSize: 18, color: textColor),
       ),
     );
   }

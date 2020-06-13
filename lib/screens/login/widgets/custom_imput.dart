@@ -22,13 +22,15 @@ class CustomInput extends StatelessWidget {
         TextField(
           obscureText: obscureText,
           decoration: InputDecoration(
-            contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+              contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 10),
               enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey[400])),
               border: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.grey[400]))),
         ),
-        SizedBox(height: 30,)
+        SizedBox(
+          height: 30,
+        )
       ],
     );
   }
